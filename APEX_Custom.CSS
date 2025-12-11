@@ -1,0 +1,68 @@
+/* Page background color */
+body {
+    background-color: #D6F3FF;
+    position: relative; /* important */
+}
+
+/* Watermark Image */
+body::before {
+    content: "";
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    width: 700px;
+    height: 700px;
+    background-image: url("#APP_FILES#kgt1go8mk7pi8b0oivp90ejsgc.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    opacity: 0.10; /* Light watermark */
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* No click blockage */
+    z-index: -1; /* Behind everything */
+}
+
+/* Make Interactive Grid Transparent Fully */
+.a-IG, 
+.a-IG-contentContainer, 
+.a-IG-body, 
+.a-IG-gridView, 
+.a-GV, 
+.a-GV-scroll, 
+.a-GV-w-scroll,
+.t-Region, 
+.t-Region-body {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* Remove stripes (rows) */
+.a-GV-row,
+.a-GV-cell {
+    background-color: transparent !important;
+}
+
+.a-IG-header{
+    background-color: #B78A2D;
+}
+
+/* Interactive Grid Header Toolbar Buttons */
+.a-Toolbar-group .a-Button,
+.a-IG-header .a-Button {
+    background-color: #000000 !important; /* Black */
+    color: #FFFFFF !important;
+    border-radius: 8px !important;
+    border: none !important;
+    padding: 8px 10px !important;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.20);
+    transition: 0.2s ease-in-out;
+}
+
+.t-BreadcrumbRegion {
+    background-color: #D6F3FF !important;
+    color: #FFFFFF !important;
+    border-radius: 10px !important; /* Optional */
+    padding: 8px 12px !important;
+}
+
